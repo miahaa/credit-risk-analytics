@@ -1,0 +1,12 @@
+purpose_code,purpose_label,total_records,bad_records,bad_share_pct,share_of_all_bad_records_pct,bad_count_rank,sparse_flag
+0,others,234,89,38.03,29.67,1,0
+3,furniture/equipment,280,62,22.14,20.67,2,0
+2,car (used),181,58,32.04,19.33,3,0
+9,retraining,97,34,35.05,11.33,4,0
+6,repairs,50,22,44.0,7.33,5,0
+1,car (new),103,17,16.5,5.67,6,0
+5,domestic appliances,22,8,36.36,2.67,7,1
+10,business,12,5,41.67,1.67,8,1
+4,radio/television,12,4,33.33,1.33,9,1
+8,vacation,9,1,11.11,0.33,10,1
+7,education,0,0,,0.0,11,1

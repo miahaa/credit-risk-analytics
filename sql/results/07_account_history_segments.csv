@@ -1,0 +1,5 @@
+account_condition,history_condition,segment_label,total_records,bad_records,bad_share_pct,sparse_flag
+0,0,Neither condition,436,54,12.39,0
+1,0,Account condition only,475,193,40.63,0
+0,1,History condition only,21,6,28.57,1
+1,1,Both conditions,68,47,69.12,0

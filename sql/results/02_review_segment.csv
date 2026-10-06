@@ -1,0 +1,145 @@
+record_id,duration_months,recorded_credit_amount,checking_status_label,credit_history_label,purpose_label,credit_risk_label,segment_total_records,segment_bad_records,segment_bad_share_pct,sparse_flag
+720,72,5595,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+848,60,14782,... < 0 DM,critical account/other credits elsewhere,business,Bad,144,86,59.72,0
+891,60,14027,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+730,60,9157,... < 0 DM,existing credits paid back duly till now,furniture/equipment,Good,144,86,59.72,0
+456,60,7418,... < 0 DM,existing credits paid back duly till now,furniture/equipment,Good,144,86,59.72,0
+563,60,7408,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+812,60,7297,no checking account,no credits taken/all credits paid back duly,retraining,Bad,144,86,59.72,0
+808,60,6836,no checking account,existing credits paid back duly till now,retraining,Bad,144,86,59.72,0
+764,60,6288,... < 0 DM,no credits taken/all credits paid back duly,repairs,Bad,144,86,59.72,0
+963,54,15945,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+977,48,18424,... < 0 DM,delay in paying off in the past,business,Bad,144,86,59.72,0
+811,48,15672,... < 0 DM,no credits taken/all credits paid back duly,retraining,Bad,144,86,59.72,0
+930,48,14421,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+576,48,12204,... < 0 DM,delay in paying off in the past,retraining,Good,144,86,59.72,0
+209,48,12169,... < 0 DM,critical account/other credits elsewhere,others,Good,144,86,59.72,0
+821,48,10961,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+929,48,10297,no checking account,no credits taken/all credits paid back duly,car (new),Bad,144,86,59.72,0
+966,48,9960,... < 0 DM,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+193,48,8487,... < 0 DM,no credits taken/all credits paid back duly,others,Good,144,86,59.72,0
+557,48,8358,... < 0 DM,delay in paying off in the past,others,Good,144,86,59.72,0
+883,48,7763,no checking account,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+709,48,7685,no checking account,critical account/other credits elsewhere,retraining,Bad,144,86,59.72,0
+14,48,7582,... < 0 DM,existing credits paid back duly till now,business,Good,144,86,59.72,0
+717,48,7476,no checking account,no credits taken/all credits paid back duly,repairs,Good,144,86,59.72,0
+910,48,7119,no checking account,delay in paying off in the past,car (used),Bad,144,86,59.72,0
+985,48,6999,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+878,48,6758,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+655,48,6681,... < 0 DM,existing credits paid back duly till now,retraining,Good,144,86,59.72,0
+886,48,6560,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+159,48,6416,... < 0 DM,critical account/other credits elsewhere,retraining,Bad,144,86,59.72,0
+920,48,6331,no checking account,all credits at this bank paid back duly,car (new),Bad,144,86,59.72,0
+721,48,6224,... < 0 DM,existing credits paid back duly till now,repairs,Bad,144,86,59.72,0
+644,48,6143,no checking account,all credits at this bank paid back duly,car (new),Bad,144,86,59.72,0
+830,48,5951,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+406,48,5381,... < 0 DM,no credits taken/all credits paid back duly,business,Good,144,86,59.72,0
+983,48,5096,... < 0 DM,all credits at this bank paid back duly,car (used),Bad,144,86,59.72,0
+609,48,4788,no checking account,no credits taken/all credits paid back duly,car (new),Good,144,86,59.72,0
+919,48,4605,no checking account,delay in paying off in the past,car (new),Bad,144,86,59.72,0
+862,48,4308,no checking account,no credits taken/all credits paid back duly,retraining,Bad,144,86,59.72,0
+542,48,3979,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+856,48,3931,no checking account,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+827,48,3844,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+230,48,3566,... < 0 DM,critical account/other credits elsewhere,retraining,Good,144,86,59.72,0
+761,48,3060,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+871,48,3051,no checking account,no credits taken/all credits paid back duly,radio/television,Bad,144,86,59.72,0
+219,47,10722,no checking account,no credits taken/all credits paid back duly,others,Good,144,86,59.72,0
+974,45,11816,no checking account,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+951,45,4746,... < 0 DM,all credits at this bank paid back duly,furniture/equipment,Bad,144,86,59.72,0
+699,45,4576,... < 0 DM,all credits at this bank paid back duly,car (new),Good,144,86,59.72,0
+851,45,3031,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+969,45,1845,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+731,42,9283,... < 0 DM,critical account/other credits elsewhere,car (new),Good,144,86,59.72,0
+632,42,7882,no checking account,no credits taken/all credits paid back duly,car (used),Good,144,86,59.72,0
+580,42,7174,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+100,42,5954,... < 0 DM,all credits at this bank paid back duly,retraining,Good,144,86,59.72,0
+913,42,4370,no checking account,existing credits paid back duly till now,furniture/equipment,Bad,144,86,59.72,0
+859,42,3965,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+712,42,3394,no checking account,all credits at this bank paid back duly,domestic appliances,Good,144,86,59.72,0
+865,40,5998,no checking account,all credits at this bank paid back duly,repairs,Bad,144,86,59.72,0
+443,39,14179,no checking account,all credits at this bank paid back duly,car (used),Good,144,86,59.72,0
+427,39,11760,... < 0 DM,existing credits paid back duly till now,repairs,Good,144,86,59.72,0
+767,39,4933,... < 0 DM,all credits at this bank paid back duly,furniture/equipment,Bad,144,86,59.72,0
+646,36,15857,no checking account,no credits taken/all credits paid back duly,business,Good,144,86,59.72,0
+783,36,14318,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+850,36,12612,... < 0 DM,no credits taken/all credits paid back duly,repairs,Bad,144,86,59.72,0
+944,36,12389,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+567,36,9857,... < 0 DM,existing credits paid back duly till now,retraining,Good,144,86,59.72,0
+892,36,9629,no checking account,all credits at this bank paid back duly,car (new),Bad,144,86,59.72,0
+868,36,9398,... < 0 DM,no credits taken/all credits paid back duly,car (new),Bad,144,86,59.72,0
+774,36,9271,no checking account,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+890,36,9034,... < 0 DM,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+701,36,8335,no checking account,no credits taken/all credits paid back duly,car (new),Bad,144,86,59.72,0
+601,36,8229,no checking account,no credits taken/all credits paid back duly,car (new),Bad,144,86,59.72,0
+940,36,8086,... < 0 DM,existing credits paid back duly till now,others,Bad,144,86,59.72,0
+888,36,8065,no checking account,all credits at this bank paid back duly,repairs,Bad,144,86,59.72,0
+104,36,7432,... < 0 DM,existing credits paid back duly till now,others,Good,144,86,59.72,0
+575,36,6948,... < 0 DM,no credits taken/all credits paid back duly,car (new),Good,144,86,59.72,0
+822,36,6887,no checking account,existing credits paid back duly till now,repairs,Bad,144,86,59.72,0
+593,36,6229,no checking account,all credits at this bank paid back duly,car (used),Bad,144,86,59.72,0
+702,36,5800,... < 0 DM,all credits at this bank paid back duly,car (new),Good,144,86,59.72,0
+735,36,5493,no checking account,no credits taken/all credits paid back duly,car (new),Good,144,86,59.72,0
+596,36,5371,no checking account,all credits at this bank paid back duly,car (used),Good,144,86,59.72,0
+600,36,5179,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+121,36,4795,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+98,36,4455,... < 0 DM,existing credits paid back duly till now,retraining,Bad,144,86,59.72,0
+688,36,3990,... < 0 DM,critical account/other credits elsewhere,radio/television,Good,144,86,59.72,0
+634,36,3959,no checking account,no credits taken/all credits paid back duly,car (used),Good,144,86,59.72,0
+831,36,3804,... < 0 DM,delay in paying off in the past,furniture/equipment,Bad,144,86,59.72,0
+192,36,3711,... < 0 DM,no credits taken/all credits paid back duly,repairs,Good,144,86,59.72,0
+588,36,3620,no checking account,no credits taken/all credits paid back duly,car (used),Good,144,86,59.72,0
+577,36,3446,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+635,36,3249,no checking account,no credits taken/all credits paid back duly,others,Good,144,86,59.72,0
+751,36,2862,... < 0 DM,existing credits paid back duly till now,others,Good,144,86,59.72,0
+760,36,2820,... < 0 DM,all credits at this bank paid back duly,others,Bad,144,86,59.72,0
+914,36,2746,no checking account,critical account/other credits elsewhere,car (used),Bad,144,86,59.72,0
+605,36,2712,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+849,36,2671,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+23,36,2384,... < 0 DM,no credits taken/all credits paid back duly,domestic appliances,Bad,144,86,59.72,0
+641,36,2348,no checking account,all credits at this bank paid back duly,car (used),Good,144,86,59.72,0
+19,36,2337,... < 0 DM,all credits at this bank paid back duly,furniture/equipment,Good,144,86,59.72,0
+469,36,2323,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+858,36,2302,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Bad,144,86,59.72,0
+189,36,2273,... < 0 DM,no credits taken/all credits paid back duly,repairs,Good,144,86,59.72,0
+903,36,2225,... < 0 DM,existing credits paid back duly till now,others,Bad,144,86,59.72,0
+775,36,2145,no checking account,existing credits paid back duly till now,retraining,Bad,144,86,59.72,0
+841,36,1977,no checking account,no credits taken/all credits paid back duly,repairs,Bad,144,86,59.72,0
+796,36,1953,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+776,36,1842,no checking account,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+579,33,4281,no checking account,all credits at this bank paid back duly,car (used),Bad,144,86,59.72,0
+976,30,11998,no checking account,no credits taken/all credits paid back duly,domestic appliances,Bad,144,86,59.72,0
+617,30,10623,no checking account,all credits at this bank paid back duly,car (new),Good,144,86,59.72,0
+781,30,8386,... < 0 DM,all credits at this bank paid back duly,car (used),Bad,144,86,59.72,0
+183,30,8072,no checking account,delay in paying off in the past,retraining,Good,144,86,59.72,0
+1000,30,6350,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+12,30,6187,no checking account,all credits at this bank paid back duly,car (new),Good,144,86,59.72,0
+877,30,5234,... < 0 DM,all credits at this bank paid back duly,others,Bad,144,86,59.72,0
+595,30,4583,no checking account,delay in paying off in the past,car (used),Good,144,86,59.72,0
+959,30,4280,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+876,30,4249,... < 0 DM,all credits at this bank paid back duly,others,Bad,144,86,59.72,0
+93,30,4221,... < 0 DM,delay in paying off in the past,retraining,Good,144,86,59.72,0
+234,30,3857,no checking account,no credits taken/all credits paid back duly,car (new),Good,144,86,59.72,0
+514,30,3832,... < 0 DM,no credits taken/all credits paid back duly,car (used),Good,144,86,59.72,0
+704,30,3622,no checking account,no credits taken/all credits paid back duly,car (used),Good,144,86,59.72,0
+574,30,3496,... < 0 DM,critical account/other credits elsewhere,car (used),Good,144,86,59.72,0
+958,30,3441,... < 0 DM,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+619,30,3108,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+92,30,2991,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+599,30,2522,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+649,30,2503,... < 0 DM,existing credits paid back duly till now,retraining,Good,144,86,59.72,0
+908,30,2406,no checking account,no credits taken/all credits paid back duly,car (used),Bad,144,86,59.72,0
+708,30,2181,... < 0 DM,all credits at this bank paid back duly,others,Good,144,86,59.72,0
+759,30,2150,... < 0 DM,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+847,30,1919,... < 0 DM,existing credits paid back duly till now,furniture/equipment,Bad,144,86,59.72,0
+547,30,1715,... < 0 DM,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+464,28,4006,no checking account,no credits taken/all credits paid back duly,others,Bad,144,86,59.72,0
+972,27,8318,... < 0 DM,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+378,27,5965,... < 0 DM,existing credits paid back duly till now,car (new),Good,144,86,59.72,0
+924,27,5293,no checking account,delay in paying off in the past,retraining,Bad,144,86,59.72,0
+899,27,3915,... < 0 DM,no credits taken/all credits paid back duly,retraining,Bad,144,86,59.72,0
+376,27,3416,no checking account,no credits taken/all credits paid back duly,furniture/equipment,Good,144,86,59.72,0
+401,27,2528,... < 0 DM,no credits taken/all credits paid back duly,retraining,Good,144,86,59.72,0
+846,27,2520,... < 0 DM,all credits at this bank paid back duly,furniture/equipment,Bad,144,86,59.72,0
+439,27,2442,no checking account,all credits at this bank paid back duly,retraining,Good,144,86,59.72,0
+573,26,7966,... < 0 DM,no credits taken/all credits paid back duly,car (new),Good,144,86,59.72,0

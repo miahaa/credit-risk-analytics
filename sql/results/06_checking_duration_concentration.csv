@@ -1,0 +1,17 @@
+checking_status_code,checking_status_label,duration_band,total_records,bad_records,bad_share_pct,share_of_all_records_pct,share_of_all_bad_records_pct,sparse_flag
+1,no checking account,<=12 months,92,33,35.87,9.2,11.0,0
+1,no checking account,>12-24 months,118,60,50.85,11.8,20.0,0
+1,no checking account,>24-36 months,38,22,57.89,3.8,7.33,0
+1,no checking account,>36 months,26,20,76.92,2.6,6.67,1
+2,... < 0 DM,<=12 months,91,27,29.67,9.1,9.0,0
+2,... < 0 DM,>12-24 months,98,34,34.69,9.8,11.33,0
+2,... < 0 DM,>24-36 months,44,23,52.27,4.4,7.67,0
+2,... < 0 DM,>36 months,36,21,58.33,3.6,7.0,0
+3,0<= ... < 200 DM,<=12 months,30,5,16.67,3.0,1.67,0
+3,0<= ... < 200 DM,>12-24 months,24,7,29.17,2.4,2.33,1
+3,0<= ... < 200 DM,>24-36 months,7,2,28.57,0.7,0.67,1
+3,0<= ... < 200 DM,>36 months,2,0,0.0,0.2,0.0,1
+4,... >= 200 DM / salary for at least 1 year,<=12 months,146,11,7.53,14.6,3.67,0
+4,... >= 200 DM / salary for at least 1 year,>12-24 months,171,21,12.28,17.1,7.0,0
+4,... >= 200 DM / salary for at least 1 year,>24-36 months,54,10,18.52,5.4,3.33,0
+4,... >= 200 DM / salary for at least 1 year,>36 months,23,4,17.39,2.3,1.33,1

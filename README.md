@@ -1,6 +1,6 @@
 # Credit risk analytics
 
-This project explores credit risk using the South German Credit dataset. Data cleaning is complete. Focused EDA is implemented; modeling is still in development. SQL analysis and a dashboard/visualization are planned. No models, SQL analyses, or dashboard have been implemented.
+This project explores credit risk using the South German Credit dataset. Cleaning, focused EDA, and SQL analysis are complete. Predictive modeling and dashboard/visualization are not yet implemented.
 
 ## Repository structure
 
@@ -8,11 +8,12 @@ This project explores credit risk using the South German Credit dataset. Data cl
 data/
   raw/SouthGermanCredit.asc              Original source data
   processed/south_german_credit_clean.csv Validated cleaned export
+  database/south_german_credit.sqlite     Generated SQLite database (Git-ignored)
 notebooks/
   01_data_cleaning.ipynb                 Implemented cleaning workflow
   02_exploratory_analysis.ipynb          Implemented focused EDA
 src/                                    Reserved for reusable Python code
-sql/                                    Reserved for SQL analysis
+sql/                                    SQLite schema, loader, queries, and CSV results
 images/                                 Reserved for visual outputs
 requirements.txt                        Current runtime dependencies
 ```
@@ -98,11 +99,74 @@ There are 700 Good and 300 Bad records. Future models must exclude both target c
 
 These limitations come from the UCI dataset documentation and inspection of the supplied files. This repository is an exploratory learning project, not a validated lending decision system.
 
-## Planned next stages
+## Project status
 
-- EDA: distributions, category profiles, and relationships with credit outcomes.
-- SQL analysis: reproducible queries and grouped summaries.
-- Modeling: leakage-safe preprocessing, stratified evaluation, and baseline comparisons.
-- Dashboard/visualization: communicate findings and dataset limitations.
+- Cleaning: complete.
+- EDA: complete, with descriptive tables and four figures.
+- SQL analysis: complete, with ten reproducible reports.
+- Predictive modeling: not yet implemented.
+- Dashboard/visualization: not yet implemented; notebook figures are EDA outputs.
 
-Cleaning and focused EDA are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
+Cleaning, EDA, and SQL analysis are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
+
+
+## SQL analysis
+
+SQLite adds concentration reporting, overlapping account/history segments, and record drilldowns to the Python EDA. It uses one source table (`credit_records`), one corrected-label table (`category_lookup`), and a reporting view (`credit_reporting`). Technical `record_id` values preserve one-based CSV row positions; they are not customer IDs. All cleaned source values are retained.
+
+Use Python's standard-library SQLite module (SQLite >=3.37; no extra packages). From the repository root:
+
+```bash
+python sql/load_database.py
+python sql/run_analysis.py
+```
+
+The first command rebuilds and verifies the ignored database under `data/database/`. The second executes SQL and exports ordered CSV results. See [SQL documentation](sql/README.md) for root resolution, schema checks, definitions, and interpretation choices.
+
+| Query | Business question |
+|---|---|
+| 01 | Does the database reconcile to the processed CSV? |
+| 02 | Which longer loans meet the documented account review condition? |
+| 03 | Do checking/history/savings findings match EDA? |
+| 04 | Does median duration by outcome match EDA? |
+| 05 | Which purposes contribute the most Bad records? |
+| 06 | Where are outcomes concentrated by checking status and duration? |
+| 07 | How do overlapping account/history conditions relate to outcomes? |
+| 08 | How do duration composition and outcomes vary by amount quartile? |
+| 09 | Which records have the largest recorded amounts within each purpose? |
+| 10 | How does duration mix vary by employment category? |
+
+### Selected executed results
+
+Source reconciliation:
+
+| Records | Bad | Good | Missing-value rows | Label mismatches | Missing lookup rows |
+|---:|---:|---:|---:|---:|---:|
+| 1,000 | 300 | 700 | 0 | 0 | 0 |
+
+Top three purposes by Bad count:
+
+| Purpose | Records | Bad | Bad share | Share of all Bad records |
+|---|---:|---:|---:|---:|
+| Others | 234 | 89 | 38.03% | 29.67% |
+| Furniture/equipment | 280 | 62 | 22.14% | 20.67% |
+| Car (used) | 181 | 58 | 32.04% | 19.33% |
+
+Account/history segmentation:
+
+| Segment | Records | Bad | Bad share | Sparse (n<30) |
+|---|---:|---:|---:|---|
+| Neither condition | 436 | 54 | 12.39% | No |
+| Account condition only | 475 | 193 | 40.63% | No |
+| History condition only | 21 | 6 | 28.57% | Yes |
+| Both conditions | 68 | 47 | 69.12% | No |
+
+Account condition means checking-status codes 1 or 2; history condition means credit-history codes 0 or 1. These are descriptive definitions, not a credit score or underwriting rule.
+
+Three findings from the executed SQL:
+
+- The top three purposes account for **209/300 Bad records (69.67%)**. Their within-purpose percentages differ, showing why concentration and Bad share answer different questions.
+- The both-conditions segment has **69.12% Bad (47/68)** versus **12.39% (54/436)** for neither condition. The history-only segment is sparse and should not drive strong conclusions.
+- The highest recorded-amount quartile has **42% Bad (105/250)** and **61.2% of records (153/250) with duration >24 months**. Amount and duration composition overlap; this does not isolate an amount effect.
+
+Complete [queries](sql/queries/) and [result CSVs](sql/results/) are available for review. Results describe this historical oversampled sample, not population default probabilities. Transformed amounts are not used to calculate financial exposure or losses. Duration cutoffs, sparse flags, review conditions, and deterministic quartile tie handling are documented in the SQL README.

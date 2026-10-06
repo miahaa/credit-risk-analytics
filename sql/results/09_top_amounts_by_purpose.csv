@@ -1,0 +1,31 @@
+purpose,purpose_label,amount_rank,record_id,recorded_credit_amount,duration_months,checking_status_label,credit_risk_label,purpose_total_records,purpose_bad_records,purpose_bad_share_pct,sparse_flag
+0,others,1,978,14896,6,no checking account,Bad,234,89,38.03,0
+0,others,2,755,14555,6,... < 0 DM,Bad,234,89,38.03,0
+0,others,3,783,14318,36,... < 0 DM,Bad,234,89,38.03,0
+1,car (new),1,896,12976,18,... < 0 DM,Bad,103,17,16.5,0
+1,car (new),2,992,12579,24,... < 0 DM,Bad,103,17,16.5,0
+1,car (new),3,954,11590,48,... >= 200 DM / salary for at least 1 year,Bad,103,17,16.5,0
+2,car (used),1,443,14179,39,no checking account,Good,181,58,32.04,0
+2,car (used),2,522,10974,36,... >= 200 DM / salary for at least 1 year,Bad,181,58,32.04,0
+2,car (used),3,966,9960,48,... < 0 DM,Bad,181,58,32.04,0
+3,furniture/equipment,1,696,15653,60,... >= 200 DM / salary for at least 1 year,Good,280,62,22.14,0
+3,furniture/equipment,2,180,12749,48,... >= 200 DM / salary for at least 1 year,Good,280,62,22.14,0
+3,furniture/equipment,3,821,10961,48,... < 0 DM,Bad,280,62,22.14,0
+4,radio/television,1,688,3990,36,... < 0 DM,Good,12,4,33.33,1
+4,radio/television,2,871,3051,48,no checking account,Bad,12,4,33.33,1
+4,radio/television,3,24,1424,12,... < 0 DM,Good,12,4,33.33,1
+5,domestic appliances,1,976,11998,30,no checking account,Bad,22,8,36.36,1
+5,domestic appliances,2,252,6204,18,... < 0 DM,Good,22,8,36.36,1
+5,domestic appliances,3,748,5507,24,... >= 200 DM / salary for at least 1 year,Good,22,8,36.36,1
+6,repairs,1,850,12612,36,... < 0 DM,Bad,50,22,44.0,0
+6,repairs,2,427,11760,39,... < 0 DM,Good,50,22,44.0,0
+6,repairs,3,572,9055,36,... >= 200 DM / salary for at least 1 year,Good,50,22,44.0,0
+8,vacation,1,276,3447,12,... >= 200 DM / salary for at least 1 year,Good,9,1,11.11,1
+8,vacation,2,368,1410,12,... < 0 DM,Good,9,1,11.11,1
+8,vacation,3,629,1238,6,... >= 200 DM / salary for at least 1 year,Good,9,1,11.11,1
+9,retraining,1,963,15945,54,... < 0 DM,Bad,97,34,35.05,0
+9,retraining,2,811,15672,48,... < 0 DM,Bad,97,34,35.05,0
+9,retraining,3,930,14421,48,... < 0 DM,Bad,97,34,35.05,0
+10,business,1,977,18424,48,... < 0 DM,Bad,12,5,41.67,1
+10,business,2,646,15857,36,no checking account,Good,12,5,41.67,1
+10,business,3,848,14782,60,... < 0 DM,Bad,12,5,41.67,1

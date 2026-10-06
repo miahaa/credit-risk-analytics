@@ -1,0 +1,5 @@
+amount_quartile,total_records,bad_records,min_recorded_amount,max_recorded_amount,bad_share_pct,duration_le_12_records,duration_13_24_records,duration_gt_24_records,duration_gt_24_share_pct,sparse_flag
+1,250,77,250,1364,30.8,174,75,1,0.4,0
+2,250,62,1366,2319,24.8,114,120,16,6.4,0
+3,250,56,2320,3972,22.4,54,136,60,24.0,0
+4,250,105,3973,18424,42.0,17,80,153,61.2,0

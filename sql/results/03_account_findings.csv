@@ -1,0 +1,15 @@
+variable_name,category_code,category_label,total_records,bad_records,bad_share_pct,sparse_flag
+checking_status,1,no checking account,274,135,49.27,0
+checking_status,2,... < 0 DM,269,105,39.03,0
+checking_status,3,0<= ... < 200 DM,63,14,22.22,0
+checking_status,4,... >= 200 DM / salary for at least 1 year,394,46,11.68,0
+credit_history,0,delay in paying off in the past,40,25,62.5,0
+credit_history,1,critical account/other credits elsewhere,49,28,57.14,0
+credit_history,2,no credits taken/all credits paid back duly,530,169,31.89,0
+credit_history,3,existing credits paid back duly till now,88,28,31.82,0
+credit_history,4,all credits at this bank paid back duly,293,50,17.06,0
+savings,1,unknown/no savings account,603,217,35.99,0
+savings,2,... <  100 DM,103,34,33.01,0
+savings,3,100 <= ... <  500 DM,63,11,17.46,0
+savings,4,500 <= ... < 1000 DM,48,6,12.5,0
+savings,5,... >= 1000 DM,183,32,17.49,0

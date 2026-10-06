@@ -1,0 +1,2 @@
+total_records,bad_records,good_records,missing_value_rows,invalid_target_rows,target_label_mismatches,missing_lookup_rows,duplicate_record_ids,row_position_issues
+1000,300,700,0,0,0,0,0,0
