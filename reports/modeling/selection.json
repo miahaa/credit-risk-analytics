@@ -1,0 +1,19 @@
+{
+  "best_logistic": "logistic_raw_C0.1",
+  "best_tree": "tree_depth4_leaf40",
+  "illustrative_oof_f1": 0.6113989637305699,
+  "illustrative_threshold": 0.3,
+  "logistic_cv_ap": 0.6215942873916381,
+  "reference_threshold": 0.5,
+  "seed": 42,
+  "selected_candidate": "logistic_raw_C0.1",
+  "selected_family": "logistic",
+  "selected_parameters": {
+    "C": 0.1,
+    "amount_transform": "raw",
+    "family": "logistic"
+  },
+  "simplicity_tolerance": 0.02,
+  "test_size": 0.2,
+  "tree_cv_ap": 0.4664418960261319
+}

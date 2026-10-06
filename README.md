@@ -1,6 +1,6 @@
 # Credit risk analytics
 
-This project explores credit risk using the South German Credit dataset. Cleaning, focused EDA, and SQL analysis are complete. Predictive modeling and dashboard/visualization are not yet implemented.
+This project explores credit risk using the South German Credit dataset. Cleaning, focused EDA, SQL analysis, and predictive modeling are complete. Dashboard/visualization is not yet implemented; notebook figures are analysis outputs.
 
 ## Repository structure
 
@@ -12,9 +12,11 @@ data/
 notebooks/
   01_data_cleaning.ipynb                 Implemented cleaning workflow
   02_exploratory_analysis.ipynb          Implemented focused EDA
+  03_predictive_modeling.ipynb           Interpretable classification analysis
 src/                                    Reserved for reusable Python code
 sql/                                    SQLite schema, loader, queries, and CSV results
-images/                                 Reserved for visual outputs
+reports/modeling/                       Modeling split, metrics, and interpretation tables
+images/modeling/                        Four modeling figures
 requirements.txt                        Current runtime dependencies
 ```
 
@@ -32,7 +34,7 @@ The supplied source has 1,000 records, 20 predictors, and one target. The proces
 
 ## Setup and execution
 
-Python **3.14** is recommended; the cleaning workflow was verified with the existing Python 3.14 environment. Pandas, matplotlib, and the Jupyter Notebook application are declared as direct dependencies. Notebook installs its required kernel and execution infrastructure transitively.
+Python **3.14** is recommended; the cleaning workflow was verified with the existing Python 3.14 environment. Pandas, matplotlib, scikit-learn, and the Jupyter Notebook application are declared as direct dependencies. NumPy is provided through the scientific Python dependencies. Notebook installs its required kernel and execution infrastructure transitively.
 
 From the repository root:
 
@@ -104,10 +106,10 @@ These limitations come from the UCI dataset documentation and inspection of the 
 - Cleaning: complete.
 - EDA: complete, with descriptive tables and four figures.
 - SQL analysis: complete, with ten reproducible reports.
-- Predictive modeling: not yet implemented.
+- Predictive modeling: complete (Logistic Regression and shallow Decision Tree).
 - Dashboard/visualization: not yet implemented; notebook figures are EDA outputs.
 
-Cleaning, EDA, and SQL analysis are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
+Cleaning, EDA, SQL analysis, and predictive modeling are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
 
 
 ## SQL analysis
@@ -170,3 +172,65 @@ Three findings from the executed SQL:
 - The highest recorded-amount quartile has **42% Bad (105/250)** and **61.2% of records (153/250) with duration >24 months**. Amount and duration composition overlap; this does not isolate an amount effect.
 
 Complete [queries](sql/queries/) and [result CSVs](sql/results/) are available for review. Results describe this historical oversampled sample, not population default probabilities. Transformed amounts are not used to calculate financial exposure or losses. Duration cutoffs, sparse flags, review conditions, and deterministic quartile tie handling are documented in the SQL README.
+
+
+## Predictive modeling
+
+[03_predictive_modeling.ipynb](notebooks/03_predictive_modeling.ipynb) compares L2 Logistic Regression and a shallow Decision Tree. Run all cells after installing `requirements.txt`, or execute from the repository root:
+
+```bash
+python -m nbconvert --to notebook --execute --inplace notebooks/03_predictive_modeling.ipynb
+```
+
+The notebook reads the cleaned CSV without modifying it and regenerates [modeling reports](reports/modeling/) and [four figures](images/modeling/). It uses the existing project-root discovery and `CREDIT_RISK_PROJECT_ROOT` override.
+
+### Methodology and frozen selection
+
+- Notebook-only target: **is_bad = 1 for Bad, 0 for Good**. Source outcome columns and all row identifiers are excluded from predictors.
+- Exactly 18 predictors: quantitative scaling, full one-hot encoding of ordinal/nominal categories, and explicit binary semantic mapping. `personal_status_sex` and `foreign_worker` are excluded. No SQL review flags or outcome-derived features enter the model.
+- Shuffled, stratified 80/20 split, seed 42: training has 800 records (240 Bad); test has 200 (60 Bad). Source positions are saved separately for audit.
+- Five identical stratified training CV folds. Preprocessing fits inside each fold. Logistic C values 0.1/1/10 are compared for log1p versus raw-scaled amount; trees use depth 2/3/4 and minimum leaf size 20/40. No class weighting or extra model families.
+- Selection uses mean average precision (AP), preferring Logistic Regression if family AP differs by at most 0.02. The selected model is **Logistic Regression, C=0.1, raw-scaled credit amount**. This representation won the approved training-only transformation comparison; it does not undo the dataset's unknown amount transformation.
+- The illustrative threshold **0.30** is frozen using training out-of-fold F1. The standard reference remains 0.50. No tuning follows test evaluation.
+
+### Training CV comparison
+
+Best configuration per family; values are fold mean ± sample standard deviation. Variability is not a formal confidence interval, and search results are development estimates.
+
+| Model | Configuration | Average precision | ROC-AUC | Mean Brier |
+|---|---|---:|---:|---:|
+| Logistic Regression | C=0.1; raw-scaled amount | 0.622 ± 0.059 | 0.784 ± 0.044 | 0.166 |
+| Decision Tree | Depth=4; minimum leaf=40 | 0.466 ± 0.034 | 0.717 ± 0.024 | 0.189 |
+
+### Locked-test performance and threshold trade-off
+
+Bad is the positive class. Both family configurations were fixed before these results; the comparator does not change the winner.
+
+| Model / threshold | Accuracy | Bad precision | Bad recall | Bad F1 | ROC-AUC | AP | Brier |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Selected logistic / 0.50 | 76.0% | 64.3% | 45.0% | 0.529 | 0.760 | 0.605 | 0.172 |
+| Selected logistic / 0.30 | 69.0% | 48.8% | 68.3% | 0.569 | 0.760 | 0.605 | 0.172 |
+| Fixed tree / 0.50 | 73.0% | 57.9% | 36.7% | 0.449 | 0.705 | 0.473 | 0.187 |
+| Majority Good baseline | 70.0% | Undefined | 0.0% | 0.000 | 0.500 | 0.300 | 0.300 |
+
+The constant-prior baseline also has AP 0.300 and ROC-AUC 0.500, with Brier 0.210. Majority-class accuracy hides complete failure to detect Bad outcomes.
+
+Lowering the selected model's threshold from 0.50 to 0.30 detects **41 rather than 27 of the 60 Bad records**, while false positives increase from **15 to 43** and missed Bad records fall from **33 to 19**. Specificity falls from 89.3% to 69.3%. This demonstrates a detection trade-off, not an optimal financial policy: the dataset contains no false-positive/false-negative costs.
+
+![Locked-test ROC and precision-recall curves](images/modeling/01_test_roc_pr.png)
+
+### Supported interpretation findings
+
+These are regularized, conditional Logistic Regression odds-ratio contrasts, not causal effects. Training category support is included:
+
+- No checking account versus the ≥200 DM / salary-for-at-least-one-year category: modeled Bad odds ratio **3.96**, with **217 versus 316** training records.
+- Critical account/other credits elsewhere versus all credits at this bank paid duly: odds ratio **2.68**, with **42 versus 226** records.
+- New-car purpose versus others: odds ratio **0.36**, with **85 versus 189** records.
+
+Full one-hot coefficients are interpreted using `exp(beta_category − beta_reference)`, not as isolated category odds ratios. Sparse groups are excluded from the strongest-association display. A compact tree rule table describes the fitted comparator without claiming definitive impurity importance. Calibration uses five test bins of 40 records each; it is evaluated without automatic recalibration or prevalence correction.
+
+### Methodological limits
+
+These are historical 1973–1975 granted-credit records, with Bad outcomes deliberately oversampled and monetary values transformed. Scores, precision and calibration describe this sample—not current population default probabilities. Earlier EDA and SQL examined the full dataset, so the test partition is a modeling holdout rather than a pristine external sample. Small categories, only 60 Bad test records, model-search/OOF optimism and possible correlated predictors limit conclusions. Excluding demographic variables does not prove fairness; proxy effects remain and sex cannot be recovered reliably from `personal_status_sex`. Age remains a demographic predictor. Independent contemporary data would be needed for stronger generalization claims.
+
+The notebook verifies that the processed CSV, cleaning/EDA notebooks, and SQL output CSVs remain unchanged. Two full executions from the repository root and `notebooks/` produced byte-identical modeling CSV/JSON/PNG artifacts. No dashboard is implemented.

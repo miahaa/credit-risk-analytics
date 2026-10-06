@@ -1,0 +1,52 @@
+variable,comparison,coefficient_contrast,odds_ratio,category_n,reference_n,sparse_flag
+employment_duration,employment_duration: unemployed vs >= 7 yrs,0.260671794154,1.29780164944,51,213,0
+employment_duration,employment_duration: < 1 yr vs >= 7 yrs,0.286065865913,1.33118013176,129,213,0
+employment_duration,employment_duration: 1 <= ... < 4 yrs vs >= 7 yrs,0.128532453064,1.13715832496,267,213,0
+employment_duration,employment_duration: 4 <= ... < 7 yrs vs >= 7 yrs,-0.25347834982,0.776096547373,140,213,0
+installment_rate,installment_rate: >= 35 vs < 20,-0.435989174869,0.646624725695,111,380,0
+installment_rate,installment_rate: 25 <= ... < 35 vs < 20,-0.405904871491,0.666373555532,181,380,0
+installment_rate,installment_rate: 20 <= ... < 25 vs < 20,-0.227525842158,0.796501837905,128,380,0
+residence_duration,residence_duration: <1 year vs ≥7 years,-0.0307073360192,0.969759345179,98,344,0
+residence_duration,residence_duration: 1–<4 years vs ≥7 years,0.172031467074,1.18771520655,238,344,0
+residence_duration,residence_duration: 4–<7 years vs ≥7 years,0.063042014182,1.0650715864,120,344,0
+property,property: unknown / no property vs real estate,-0.50754130432,0.601973831239,232,121,0
+property,property: car or other vs real estate,-0.197832823143,0.820507011456,176,121,0
+property,property: building soc. savings agr./life insurance vs real estate,-0.376404490673,0.686324664963,271,121,0
+number_credits,number_credits: 2–3 credits vs 1 credit,0.218350370049,1.24402285962,265,511,0
+number_credits,number_credits: 4–5 credits vs 1 credit,0.123930402285,1.13193708802,19,511,1
+number_credits,number_credits: ≥6 credits vs 1 credit,0.16752043246,1.18236944865,5,511,1
+job,job: unemployed/unskilled non-resident vs skilled employee/official,-0.155497317116,0.855989373446,20,503,1
+job,job: unskilled resident vs skilled employee/official,-0.232181386976,0.792802306251,157,503,0
+job,job: manager/self-employed/highly qualified vs skilled employee/official,-0.110247871093,0.895612111428,120,503,0
+checking_status,checking_status: no checking account vs ... >= 200 DM / salary for at least 1 year,1.37660246031,3.96141965719,217,316,0
+checking_status,checking_status: ... < 0 DM vs ... >= 200 DM / salary for at least 1 year,1.0527217276,2.86543946006,221,316,0
+checking_status,checking_status: 0<= ... < 200 DM vs ... >= 200 DM / salary for at least 1 year,0.621526090715,1.86176710045,46,316,0
+credit_history,credit_history: delay in paying off in the past vs all credits at this bank paid back duly,0.807908750592,2.24321196242,33,226,0
+credit_history,credit_history: critical account/other credits elsewhere vs all credits at this bank paid back duly,0.984946930173,2.67766977718,42,226,0
+credit_history,credit_history: no credits taken/all credits paid back duly vs all credits at this bank paid back duly,0.680819934331,1.97549684604,430,226,0
+credit_history,credit_history: existing credits paid back duly till now vs all credits at this bank paid back duly,0.392669303134,1.48092856991,69,226,0
+purpose,purpose: car (new) vs others,-1.0284063573,0.357576355693,85,189,0
+purpose,purpose: car (used) vs others,-0.388013026511,0.678403505976,138,189,0
+purpose,purpose: furniture/equipment vs others,-0.5985428563,0.549611916432,231,189,0
+purpose,purpose: radio/television vs others,-0.40488428089,0.667053997287,11,189,1
+purpose,purpose: domestic appliances vs others,-0.311096694421,0.732643029951,19,189,1
+purpose,purpose: repairs vs others,-0.185156983439,0.830973824484,43,189,0
+purpose,purpose: education vs others,-0.44884614001,0.638364309864,0,189,1
+purpose,purpose: vacation vs others,-0.51442781421,0.597842573796,8,189,1
+purpose,purpose: retraining vs others,-0.521520375542,0.593617340251,67,189,0
+purpose,purpose: business vs others,-0.536891512139,0.584562536622,9,189,1
+savings,savings: unknown/no savings account vs ... >= 1000 DM,0.819871166041,2.27020733889,475,148,0
+savings,savings: ... <  100 DM vs ... >= 1000 DM,0.485896043503,1.62563099252,88,148,0
+savings,savings: 100 <= ... <  500 DM vs ... >= 1000 DM,0.273755917267,1.31489382019,52,148,0
+savings,savings: 500 <= ... < 1000 DM vs ... >= 1000 DM,0.129576599065,1.13834630439,37,148,0
+other_debtors,other_debtors: co-applicant vs none,-0.0578278914077,0.943812371678,33,727,0
+other_debtors,other_debtors: guarantor vs none,-0.404937491767,0.667018503703,40,727,0
+other_installment_plans,other_installment_plans: bank vs none,0.38030328889,1.46272815136,109,650,0
+other_installment_plans,other_installment_plans: stores vs none,0.401916289018,1.49468620579,41,650,0
+housing,housing: for free vs rent,0.377745682952,1.45899184919,142,571,0
+housing,housing: own vs rent,0.157588038269,1.17068381842,87,571,0
+duration_months,duration: +1 training SD,0.323493688634,1.38194743426,800,800,0
+age,age: +1 training SD,-0.0853987367196,0.918146112834,800,800,0
+credit_amount,amount (raw): +1 training SD,0.220297523764,1.24644752318,800,800,0
+people_liable,dependents: ≥3 vs 0–2,-0.0458183090938,0.955215500395,127,673,0
+telephone,registered telephone: yes vs no,-0.263901423003,0.768049247913,338,462,0

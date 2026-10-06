@@ -1,0 +1,12 @@
+leaf,rule,training_records,training_bad_share,sparse_flag
+4,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months <= 31.50 AND duration_months <= 11.50 AND property is not unknown / no property,46,0.369565217391,0
+5,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months <= 31.50 AND duration_months <= 11.50 AND property is unknown / no property,40,0.025,0
+7,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months <= 31.50 AND duration_months > 11.50 AND credit_amount <= 1381.50,91,0.571428571429,0
+8,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months <= 31.50 AND duration_months > 11.50 AND credit_amount > 1381.50,213,0.356807511737,0
+10,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months > 31.50 AND residence_duration is not ≥7 years,51,0.529411764706,0
+11,checking_status is not ... >= 200 DM / salary for at least 1 year AND duration_months > 31.50 AND residence_duration is ≥7 years,43,0.744186046512,0
+15,checking_status is ... >= 200 DM / salary for at least 1 year AND credit_amount <= 3890.93 AND age <= 32.50 AND duration_months <= 16.50,53,0.0943396226415,0
+16,checking_status is ... >= 200 DM / salary for at least 1 year AND credit_amount <= 3890.93 AND age <= 32.50 AND duration_months > 16.50,42,0.190476190476,0
+18,checking_status is ... >= 200 DM / salary for at least 1 year AND credit_amount <= 3890.93 AND age > 32.50 AND property is not unknown / no property,98,0.0612244897959,0
+19,checking_status is ... >= 200 DM / salary for at least 1 year AND credit_amount <= 3890.93 AND age > 32.50 AND property is unknown / no property,53,0,0
+20,checking_status is ... >= 200 DM / salary for at least 1 year AND credit_amount > 3890.93,70,0.228571428571,0
