@@ -1,6 +1,25 @@
 # Credit risk analytics
 
-This project explores credit risk using the South German Credit dataset. Cleaning, focused EDA, SQL analysis, and predictive modeling are complete. Dashboard/visualization is not yet implemented; notebook figures are analysis outputs.
+This project explores credit risk using the South German Credit dataset. Cleaning, focused EDA, SQL analysis, predictive modeling, and the Streamlit presentation are complete. This is a historical analytical portfolio project, not a production underwriting system.
+
+## Dashboard
+
+The [Streamlit case study](dashboard/README.md) presents saved account patterns, SQL segments, model performance, two frozen threshold trade-offs, and three modeled associations. It reads existing artifacts without running analysis or scoring applicants. Source **credit_risk = 0 means Bad / 1 means Good**; modeling uses **is_bad = 1 for Bad**.
+
+From the repository root, with a Python environment activated:
+
+```bash
+python -m pip install -r dashboard/requirements.txt
+python -m streamlit run dashboard/app.py --browser.gatherUsageStats false
+```
+
+Local launch and browser rendering were verified. No public deployment is configured. See the dashboard README for an isolated environment and artifact requirements.
+
+![Dataset and checking-status overview](images/dashboard/overview.png)
+
+![Saved model performance and frozen threshold comparison](images/dashboard/model_tradeoff.png)
+
+**Architecture:** Raw data → Python cleaning → EDA → SQLite / SQL analysis → Logistic Regression modeling → read-only Streamlit analytical dashboard.
 
 ## Repository structure
 
@@ -17,6 +36,8 @@ src/                                    Reserved for reusable Python code
 sql/                                    SQLite schema, loader, queries, and CSV results
 reports/modeling/                       Modeling split, metrics, and interpretation tables
 images/modeling/                        Four modeling figures
+images/dashboard/                       Captured dashboard screenshots
+dashboard/                              Read-only Streamlit app, dependencies and launch guide
 requirements.txt                        Current runtime dependencies
 ```
 
@@ -107,9 +128,9 @@ These limitations come from the UCI dataset documentation and inspection of the 
 - EDA: complete, with descriptive tables and four figures.
 - SQL analysis: complete, with ten reproducible reports.
 - Predictive modeling: complete (Logistic Regression and shallow Decision Tree).
-- Dashboard/visualization: not yet implemented; notebook figures are EDA outputs.
+- Dashboard/visualization: complete (read-only Streamlit case study; verified locally).
 
-Cleaning, EDA, SQL analysis, and predictive modeling are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
+The analytical portfolio workflow is complete, including its Streamlit presentation. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
 
 
 ## SQL analysis
@@ -233,4 +254,4 @@ Full one-hot coefficients are interpreted using `exp(beta_category − beta_refe
 
 These are historical 1973–1975 granted-credit records, with Bad outcomes deliberately oversampled and monetary values transformed. Scores, precision and calibration describe this sample—not current population default probabilities. Earlier EDA and SQL examined the full dataset, so the test partition is a modeling holdout rather than a pristine external sample. Small categories, only 60 Bad test records, model-search/OOF optimism and possible correlated predictors limit conclusions. Excluding demographic variables does not prove fairness; proxy effects remain and sex cannot be recovered reliably from `personal_status_sex`. Age remains a demographic predictor. Independent contemporary data would be needed for stronger generalization claims.
 
-The notebook verifies that the processed CSV, cleaning/EDA notebooks, and SQL output CSVs remain unchanged. Two full executions from the repository root and `notebooks/` produced byte-identical modeling CSV/JSON/PNG artifacts. No dashboard is implemented.
+The notebook verifies that the processed CSV, cleaning/EDA notebooks, and SQL output CSVs remain unchanged. Two full executions from the repository root and `notebooks/` produced byte-identical modeling CSV/JSON/PNG artifacts. The Streamlit dashboard consumes these saved results; it does not rerun modeling or modify analytical artifacts.
