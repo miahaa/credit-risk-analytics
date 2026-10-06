@@ -1,6 +1,6 @@
 # Credit risk analytics
 
-This project explores credit risk using the South German Credit dataset. Data cleaning is complete. EDA and modeling are still in development; SQL analysis and a dashboard/visualization are planned. No models, SQL analyses, or dashboard have been implemented.
+This project explores credit risk using the South German Credit dataset. Data cleaning is complete. Focused EDA is implemented; modeling is still in development. SQL analysis and a dashboard/visualization are planned. No models, SQL analyses, or dashboard have been implemented.
 
 ## Repository structure
 
@@ -10,7 +10,7 @@ data/
   processed/south_german_credit_clean.csv Validated cleaned export
 notebooks/
   01_data_cleaning.ipynb                 Implemented cleaning workflow
-  02_exploratory_analysis.ipynb          EDA title and description only
+  02_exploratory_analysis.ipynb          Implemented focused EDA
 src/                                    Reserved for reusable Python code
 sql/                                    Reserved for SQL analysis
 images/                                 Reserved for visual outputs
@@ -31,7 +31,7 @@ The supplied source has 1,000 records, 20 predictors, and one target. The proces
 
 ## Setup and execution
 
-Python **3.14** is recommended; the cleaning workflow was verified with the existing Python 3.14 environment. Only pandas and the Jupyter Notebook application are declared as direct dependencies. Notebook installs its required kernel and execution infrastructure transitively.
+Python **3.14** is recommended; the cleaning workflow was verified with the existing Python 3.14 environment. Pandas, matplotlib, and the Jupyter Notebook application are declared as direct dependencies. Notebook installs its required kernel and execution infrastructure transitively.
 
 From the repository root:
 
@@ -105,4 +105,4 @@ These limitations come from the UCI dataset documentation and inspection of the 
 - Modeling: leakage-safe preprocessing, stratified evaluation, and baseline comparisons.
 - Dashboard/visualization: communicate findings and dataset limitations.
 
-Only the cleaning stage is implemented today.
+Cleaning and focused EDA are implemented today. Open `notebooks/02_exploratory_analysis.ipynb` and run all cells after cleaning; it reads the processed CSV without modifying it. EDA contains descriptive tables and four figures, with no modeling.
