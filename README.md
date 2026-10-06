@@ -13,7 +13,7 @@ python -m pip install -r dashboard/requirements.txt
 python -m streamlit run dashboard/app.py --browser.gatherUsageStats false
 ```
 
-Local launch and browser rendering were verified. No public deployment is configured. See the dashboard README for an isolated environment and artifact requirements.
+**Live dashboard:** [Open the Credit Risk Analytics Dashboard](https://credit-risk-analytics-cvbzwyzs9h6wx9zay23tm6.streamlit.app/)\n\nLocal launch and browser rendering were verified. The public Streamlit deployment is available at the link above. See the dashboard README for an isolated environment and artifact requirements.
 
 ![Dataset and checking-status overview](images/dashboard/overview.png)
 
